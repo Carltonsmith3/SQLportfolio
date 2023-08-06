@@ -1,0 +1,21 @@
+
+CREATE TABLE allen_iverson (id INTEGER PRIMARY KEY, points
+INTEGER, steals INTEGER, asist INTEGER, rebounds INTEGER);
+INSERT INTO allen_iverson VALUES (1, 24368, 1983, 5624, 3394);
+
+
+CREATE TABLE ai_accolades ( mvp INTEGER, allstar INTEGER, scoring_title INTEGER, hall_of_fame TEXT, all_ba INTEGER);
+
+INSERT INTO ai_accolades VALUES ( 1, 11, 4, "yes", 7);
+
+10 CREATE TABLE ai_bio ( nickname TEXT, position TEXT, college
+TEXT, nbadraft_year INTEGER, nbadraft_round INTEGER, nbadraft_pick INTEGER);
+
+
+INSERT INTO ai_bio VALUES ( "the answer", "shooting guard",
+"georgetown", 1996, 1, 1);
+
+SELECT * 
+FROM allen iverson
+JOIN ai_accolades ON allen_iverson.id = ai_accolades.mvp
+JOIN ai _bio ON allen_iverson.id = ai_bio.nbadraft_pick;
