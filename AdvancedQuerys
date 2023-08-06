@@ -1,0 +1,26 @@
+
+CREATE TABLE user_post (post_id INTEGER PRIMARY KEY,
+user_name TEXT, post_content TEXT, post_date TEXT);
+
+
+INSERT INTO user_post (post_id, user_name, post_content,
+post_date) VALUES (1, "John Doe", "Hello, how are you?", "2023-07-20");
+
+
+INSERT INTO user_post (post_id, user_name, post_content, post_date) VALUES (2,
+"Jane Smith",
+"SQL is cool",
+"2023-07-20");
+
+INSERT INTO user_post (post_id, user_name, post_content, post date) 
+VALUES (3,
+"Hello Kitty",
+"MEOW", "2023-07-20");
+
+
+UPDATE user_post
+SET post_content = "Hello, this is my updated post!"
+WHERE user_name = "John Doe" AND post_id = 1;
+SELECT * FROM user_post;
+DELETE FROM user_post
+WHERE user_name = "Jane Smith" AND post_id =2;
