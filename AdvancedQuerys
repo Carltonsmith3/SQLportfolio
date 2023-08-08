@@ -1,4 +1,4 @@
-
+.
 CREATE TABLE user_post (post_id INTEGER PRIMARY KEY,
 user_name TEXT, post_content TEXT, post_date TEXT);
 
