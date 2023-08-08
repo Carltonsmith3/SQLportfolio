@@ -1,0 +1,30 @@
+CREATE TABLE top5_2003NBAdraft (id INTEGER PRIMARY KEY, name TEXT, college TEXT, team_drafted TEXT, years_played INTEGER,
+games_played INTEGER, minutes INTEGER, points INTEGER, rebounds INTEGER, asist INTEGER);
+
+INSERT INTO top5_2003NBAdraft (name, college, team_drafted, years_played, games_played, minutes, points, rebounds, asist) VALUES ( "lebron james", "highschool", "cavs", "20", "1421", "54093", "38652", "10667", "10420");
+
+INSERT INTO top5_2003NBAdraft (name, college, team_drafted, years_played, games_played, minutes, points, rebounds, asist) VALUES ( "darko milicic", "overseas", "pistons", "10", "468", "8638", "2813", "1971", "405");
+
+
+INSERT INTO top5_2003NBAdraft (name, college, team_drafted, years_played, games_played, minutes, points, rebounds, asist) VALUES ( "carmelo anthony", "syracuse", "nuggets", "19", "1260", "43514", "28289", "7808", "3422");
+
+INSERT INTO top5_2003NBAdraft (name, college, team_drafted, years_played, games_played, minutes, points, rebounds, asist) VALUES ( "chris bosh", "georgia tech", "raptors", "13", "893", "31936", "17189", "7592", "1795");
+
+
+INSERT INTO top5_2003NBAdraft (name, college, team_drafted, years_played, games_played, minutes, points, rebounds, asist) VALUES ( "dwyane wade", "marquette", "heat", "16", "1054", "35773", "23165", "4933", "5701");
+
+SELECT name FROM top5_2003NBAdraft WHERE points > 20000;
+
+SELECT name, MAX(rebounds)FROM top5_2003NBAdraft;
+
+SELECT name, MIN(asist) AS min_asist FROM top5_2003NBAdraft GROUP BY name HAVING asist < 500;
+
+SELECT name, points, 
+      CASE
+          WHEN points > 17000 THEN "HOF'er"
+          ELSE "MID" 
+          END as "legacy"
+
+FROM top5_2003NBAdraft;
+
+SELECT name FROM top5_2003NBAdraft WHERE points AND rebounds > 3000;
